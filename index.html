@@ -262,6 +262,348 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.duantao.top/2018/01/25/css-box-modal/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="段涛(dt009)">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/dt009.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="段涛的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/25/css-box-modal/" itemprop="url">css盒模型(标准和怪异盒模型)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T14:32:24+08:00">
+                2018-01-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css-基础/" itemprop="url" rel="index">
+                    <span itemprop="name">css 基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h1><h2 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h2><ol>
+<li>content: 内容区块;</li>
+<li>padding: 内边距;</li>
+<li>border: 边框;</li>
+<li>margin: 外边距;</li>
+</ol>
+<h2 id="标准盒模型和怪异盒模型"><a href="#标准盒模型和怪异盒模型" class="headerlink" title="标准盒模型和怪异盒模型"></a>标准盒模型和怪异盒模型</h2><p>盒模型分为两种: </p>
+<ol>
+<li>W3C 标准盒模型;</li>
+<li>IE 标准盒模型;</li>
+</ol>
+<h3 id="怪异模式"><a href="#怪异模式" class="headerlink" title="怪异模式"></a>怪异模式</h3><blockquote>
+<p>部分浏览器在支持W3C标准的同时还保留了原来的解析模式;</p>
+</blockquote>
+<p>主要表现在 <strong>IE</strong> 内核的浏览器, 当不对 Doctype 进行定义的时,触发 怪异模式.</p>
+<h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><h4 id="标准盒模型"><a href="#标准盒模型" class="headerlink" title="标准盒模型"></a>标准盒模型</h4><pre><code>&gt; 块的总宽 = width + margin(左右) + padding(左右) + border(左右);
+</code></pre><h4 id="怪异和模型"><a href="#怪异和模型" class="headerlink" title="怪异和模型"></a>怪异和模型</h4><pre><code>&gt; width = content的宽 + padding(左右) + border(左右);
+
+&gt; 块的总宽 = width + margin(左右);
+</code></pre><h3 id="box-sizing-属性"><a href="#box-sizing-属性" class="headerlink" title="box-sizing 属性"></a>box-sizing 属性</h3><ul>
+<li><p>语法</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-sizing:content-box || border-box || inherit;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>当设置 border-box 时, 采用怪异模式解析计算;</li>
+<li>当设置 content-box 时, 采用 w3c 标准解析计算;<blockquote>
+<p>建议初始化是进行 box-sizing: border-box; 设置.</p>
+</blockquote>
+</li>
+</ul>
+<p><a href="/2018/01/25/css_center/index.html">利用css设置元素垂直居中的方法</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.duantao.top/2018/01/25/css_center/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="段涛(dt009)">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/dt009.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="段涛的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/25/css_center/" itemprop="url">利用css设置元素垂直居中的方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T14:00:20+08:00">
+                2018-01-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css-基础/" itemprop="url" rel="index">
+                    <span itemprop="name">css 基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="利用css设置元素垂直居中的方法"><a href="#利用css设置元素垂直居中的方法" class="headerlink" title="利用css设置元素垂直居中的方法"></a>利用css设置元素垂直居中的方法</h1><p>文本和元素的垂直居中很常见</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>元素的垂直居中也是我们日常网页布局中经常会遇到的问题</p>
+<p>设置子元素的垂直居中, 那就要知道父元素的高度, 父元素没有高度是看不到效果的</p>
+<h2 id="行内文本的垂直居中"><a href="#行内文本的垂直居中" class="headerlink" title="行内文本的垂直居中"></a>行内文本的垂直居中</h2><p>使用 line-height 属性</p>
+<p><img src="/images/59e41d39809f9f356e.png" alt="image"></p>
+<h2 id="行内非文本的垂直居中"><a href="#行内非文本的垂直居中" class="headerlink" title="行内非文本的垂直居中"></a>行内非文本的垂直居中</h2><p>line-height</p>
+<p>vertical-align</p>
+<p><img src="/images/59e41f378cd8353c77.png" alt="image"></p>
+<h2 id="未知高度块级元素"><a href="#未知高度块级元素" class="headerlink" title="未知高度块级元素"></a>未知高度块级元素</h2><p>方法1</p>
+<p>position. translate</p>
+<p><img src="/images/59e4218c5378b8ada5.png" alt="image"></p>
+<p>方法2</p>
+<p>position,  但是不使用 translate</p>
+<p>子元素要有高度,  并设置 maring: auto</p>
+<p><img src="/images/59e4231e3189083f86.png" alt="image"></p>
+<p>方法3</p>
+<p>display: table</p>
+<p><img src="/images/59e4251c5844437301.png" alt="image"></p>
+<p>方法4</p>
+<p>flex布局</p>
+<p><img src="/images/59e425c2268eaf04b0.png" alt="image"></p>
+<p>方法5</p>
+<p>添加一个新的 dom元素, 设置一部分属性</p>
+<p>垂直居中</p>
+<p><img src="/images/59e4281795b566adf6.png" alt="image"></p>
+<p><img src="/images/59e4280394804b4cd5.png" alt="image"></p>
+<h2 id="已知高度的块级元素"><a href="#已知高度的块级元素" class="headerlink" title="已知高度的块级元素"></a>已知高度的块级元素</h2><p>这个就不说了, 数学计算都行</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="http://m.jb51.net/css/576737.html" target="_blank" rel="noopener">参考</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.duantao.top/2018/01/25/brew-install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -931,7 +1273,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -942,7 +1284,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -953,7 +1295,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
