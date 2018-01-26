@@ -262,6 +262,272 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.duantao.top/2018/01/26/mysql-003/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="段涛(dt009)">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/dt009.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="段涛的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/26/mysql-003/" itemprop="url">mysql 学习(三) SELECT 语句</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-26T16:51:00+08:00">
+                2018-01-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="SELECT-命令"><a href="#SELECT-命令" class="headerlink" title="SELECT 命令"></a>SELECT 命令</h1><ul>
+<li><p>SELECT 语法:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name1, column_name2 FROM table_name;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>查看 数据表中 的 column_name1, column_name2 的列</p>
+</blockquote>
+<p>  或者:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM table_name;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>查看 数据表中的所有数据</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="SELECT-DISTINCT"><a href="#SELECT-DISTINCT" class="headerlink" title="SELECT DISTINCT"></a>SELECT DISTINCT</h1><ul>
+<li><p>SELECT DISTINCT 语法:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT column_name FROM table_name;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>查看数据表中 column_name 列中 唯一不同的值, 去掉 重复的值</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="WHERE-子句"><a href="#WHERE-子句" class="headerlink" title="WHERE 子句"></a>WHERE 子句</h1><ul>
+<li><p>WHERE 子句用于过滤记录, 语法:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name1, column_name2 FROM table_name WHERE column_name operator value;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>提取满足制定标准的记录</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="WHERE-语句中的运算符"><a href="#WHERE-语句中的运算符" class="headerlink" title="WHERE 语句中的运算符"></a>WHERE 语句中的运算符</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">运算符</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">=</td>
+<td style="text-align:left">等于</td>
+</tr>
+<tr>
+<td style="text-align:center">!=</td>
+<td style="text-align:left">不等于</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:left">大于</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:left">小于</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;=</td>
+<td style="text-align:left">大于等于</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;=</td>
+<td style="text-align:left">小于等于</td>
+</tr>
+<tr>
+<td style="text-align:center">BETWEEN</td>
+<td style="text-align:left">在某个范围内</td>
+</tr>
+<tr>
+<td style="text-align:center">LIKE</td>
+<td style="text-align:left">搜索某种模式</td>
+</tr>
+<tr>
+<td style="text-align:center">IN</td>
+<td style="text-align:left">指定针对某个列的多个可能值</td>
+</tr>
+</tbody>
+</table>
+<h2 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h2><ol>
+<li><p>同时满足两个条件的值(AND: 与):</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM table_name WHERE column_name &gt; value AND column_name &lt; value;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>满足其中一个条件 (OR: 或):</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM table_name WHERE column_name &gt; value OR column_name &lt; value;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>满足不包含该条件的值(NOT: 非): </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM table_name WHERE NOT column_name &gt; value;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>逻辑运算的优先级:</p>
+<blockquote>
+<p>() &gt; not &gt; and &gt; or</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="特殊条件"><a href="#特殊条件" class="headerlink" title="特殊条件"></a>特殊条件</h2><ol>
+<li><p>空值判断(IS NULL):</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM table_name WHERE column_name IS NULL;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 ** 之间(BETWEEN AND):</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM table_name WHERE column_name BETWEEN VALUE AND VALUE ;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>筛选有和几个值中任意一个值相等的记录(IN):</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM table_name WHERE column_name IN (VALUE1 , VALUE2, VALUE3);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>LIKE 模糊查询:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM table_name WHERE column_name LIKE &apos;M%&apos;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>查询 table_name 表中 column_name 列 中 以 M 开头的信息</p>
+<ol>
+<li>% : 表示多个字值, _(下划线)表示一个字符;</li>
+<li>M% : 查询以 M 开头的;</li>
+<li>%M% : 查询包含 M 的所有内容;</li>
+<li>%M_ : 查询 倒数 第二位 是 M 的信息;</li>
+</ol>
+</blockquote>
+</li>
+<li><p>WHERE 不带运算符 (隐式转化): </p>
+<blockquote>
+<p>当0时转化为 false，当其他值是转化为true。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; SELECT studentNO FROM student WHERE 0</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<p>则会返回一个空集，因为每一行记录WHERE都返回false。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; SELECT  studentNO  FROM student WHERE 1</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; SELECT studentNO FROM student WHERE &apos;abc&apos;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<p>都将返回student表所有行记录的studentNO列。因为每一行记录WHERE都返回true。</p>
+</blockquote>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.duantao.top/2018/01/25/mysql-002/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -394,6 +660,36 @@
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP &#123;DATABASE | SCHEMA&#125; [IF EXISTS] db_name;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<h1 id="一些最重要的-SQL-命令"><a href="#一些最重要的-SQL-命令" class="headerlink" title="一些最重要的 SQL 命令"></a>一些最重要的 SQL 命令</h1><ol>
+<li>SELECT - 从数据库中提取数据;</li>
+<li>UPDATE - 更新数据库中的数据;</li>
+<li>DELETE - 从数据库中删除数据;</li>
+<li>INSERT INTO - 向数据库中插入新数据;</li>
+<li>CREATE DATABASE - 创建新数据库;</li>
+<li>ALTER DATABASE - 修改数据库;</li>
+<li>CREATE TABLE - 创建新表;</li>
+<li>ALTER TABLE - 变更修改数据表;</li>
+<li>DROP TABLE - 删除表;</li>
+<li>CREATE INDEX - 创建索引(搜索键);</li>
+<li>DROP INDEX- 删除索引</li>
+</ol>
+<h1 id="导入-sql-文件"><a href="#导入-sql-文件" class="headerlink" title="导入 sql 文件"></a>导入 sql 文件</h1><ol>
+<li><p>先创建 数据库:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE db_name;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用数据库</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use db_name;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入 sql 文件:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source sql文件的路径</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看导入的 sql:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW TABLES ;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p>查看到导入的数据就成功了</p>
+</blockquote>
 
           
         
@@ -1453,7 +1749,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
