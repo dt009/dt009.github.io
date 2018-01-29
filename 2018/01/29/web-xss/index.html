@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="css知识,css,垂直居中," />
+  <meta name="keywords" content="前端安全,XSS," />
 
 
 
@@ -79,27 +79,18 @@
 
 
 
-<meta name="description" content="利用css设置元素垂直居中的方法文本和元素的垂直居中很常见 前言元素的垂直居中也是我们日常网页布局中经常会遇到的问题 设置子元素的垂直居中, 那就要知道父元素的高度, 父元素没有高度是看不到效果的 行内文本的垂直居中使用 line-height 属性  行内非文本的垂直居中line-height vertical-align  未知高度块级元素方法1 position. translate  方法">
-<meta name="keywords" content="css知识,css,垂直居中">
+<meta name="description" content="XSS手段 盗用 cookie, 获取敏感信息; 破坏正常结构, 插入一些恶意的内容(反射型); 利用 flash; DDOS 攻击效果;  攻击类型 反射型: 发出请求时, XSS 代码出现在 URL 中, 作为输入提交到服务器端, 服务器端解析后响应, XSS代码随响应内容一起传回给浏览器, 最后浏览器解析执行 XSS 代码.  明文, 在 URL 中 html 中有部分是后端解析返回的模板渲">
+<meta name="keywords" content="前端安全,XSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用css设置元素垂直居中的方法">
-<meta property="og:url" content="http://blog.duantao.top/2018/01/25/css_center/index.html">
+<meta property="og:title" content="WEB 安全 XSS">
+<meta property="og:url" content="http://blog.duantao.top/2018/01/29/web-xss/index.html">
 <meta property="og:site_name" content="段涛的博客">
-<meta property="og:description" content="利用css设置元素垂直居中的方法文本和元素的垂直居中很常见 前言元素的垂直居中也是我们日常网页布局中经常会遇到的问题 设置子元素的垂直居中, 那就要知道父元素的高度, 父元素没有高度是看不到效果的 行内文本的垂直居中使用 line-height 属性  行内非文本的垂直居中line-height vertical-align  未知高度块级元素方法1 position. translate  方法">
+<meta property="og:description" content="XSS手段 盗用 cookie, 获取敏感信息; 破坏正常结构, 插入一些恶意的内容(反射型); 利用 flash; DDOS 攻击效果;  攻击类型 反射型: 发出请求时, XSS 代码出现在 URL 中, 作为输入提交到服务器端, 服务器端解析后响应, XSS代码随响应内容一起传回给浏览器, 最后浏览器解析执行 XSS 代码.  明文, 在 URL 中 html 中有部分是后端解析返回的模板渲">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.duantao.top/images/59e41d39809f9f356e.png">
-<meta property="og:image" content="http://blog.duantao.top/images/59e41f378cd8353c77.png">
-<meta property="og:image" content="http://blog.duantao.top/images/59e4218c5378b8ada5.png">
-<meta property="og:image" content="http://blog.duantao.top/images/59e4231e3189083f86.png">
-<meta property="og:image" content="http://blog.duantao.top/images/59e4251c5844437301.png">
-<meta property="og:image" content="http://blog.duantao.top/images/59e425c2268eaf04b0.png">
-<meta property="og:image" content="http://blog.duantao.top/images/59e4281795b566adf6.png">
-<meta property="og:image" content="http://blog.duantao.top/images/59e4280394804b4cd5.png">
-<meta property="og:updated_time" content="2018-01-25T06:19:11.000Z">
+<meta property="og:updated_time" content="2018-01-29T03:29:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用css设置元素垂直居中的方法">
-<meta name="twitter:description" content="利用css设置元素垂直居中的方法文本和元素的垂直居中很常见 前言元素的垂直居中也是我们日常网页布局中经常会遇到的问题 设置子元素的垂直居中, 那就要知道父元素的高度, 父元素没有高度是看不到效果的 行内文本的垂直居中使用 line-height 属性  行内非文本的垂直居中line-height vertical-align  未知高度块级元素方法1 position. translate  方法">
-<meta name="twitter:image" content="http://blog.duantao.top/images/59e41d39809f9f356e.png">
+<meta name="twitter:title" content="WEB 安全 XSS">
+<meta name="twitter:description" content="XSS手段 盗用 cookie, 获取敏感信息; 破坏正常结构, 插入一些恶意的内容(反射型); 利用 flash; DDOS 攻击效果;  攻击类型 反射型: 发出请求时, XSS 代码出现在 URL 中, 作为输入提交到服务器端, 服务器端解析后响应, XSS代码随响应内容一起传回给浏览器, 最后浏览器解析执行 XSS 代码.  明文, 在 URL 中 html 中有部分是后端解析返回的模板渲">
 
 
 
@@ -129,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.duantao.top/2018/01/25/css_center/"/>
+  <link rel="canonical" href="http://blog.duantao.top/2018/01/29/web-xss/"/>
 
 
 
 
 
-  <title>利用css设置元素垂直居中的方法 | 段涛的博客</title>
+  <title>WEB 安全 XSS | 段涛的博客</title>
   
 
 
@@ -272,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.duantao.top/2018/01/25/css_center/">
+    <link itemprop="mainEntityOfPage" href="http://blog.duantao.top/2018/01/29/web-xss/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="段涛(dt009)">
@@ -289,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">利用css设置元素垂直居中的方法</h1>
+          <h1 class="post-title" itemprop="name headline">WEB 安全 XSS</h1>
         
 
         <div class="post-meta">
@@ -301,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T14:00:20+08:00">
-                2018-01-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T10:39:55+08:00">
+                2018-01-29
               </time>
             
 
@@ -324,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css-基础/" itemprop="url" rel="index">
-                    <span itemprop="name">css 基础</span>
+                  <a href="/categories/前端安全/" itemprop="url" rel="index">
+                    <span itemprop="name">前端安全</span>
                   </a>
                 </span>
 
@@ -361,34 +352,38 @@
       
 
       
-        <h1 id="利用css设置元素垂直居中的方法"><a href="#利用css设置元素垂直居中的方法" class="headerlink" title="利用css设置元素垂直居中的方法"></a>利用css设置元素垂直居中的方法</h1><p>文本和元素的垂直居中很常见</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>元素的垂直居中也是我们日常网页布局中经常会遇到的问题</p>
-<p>设置子元素的垂直居中, 那就要知道父元素的高度, 父元素没有高度是看不到效果的</p>
-<h2 id="行内文本的垂直居中"><a href="#行内文本的垂直居中" class="headerlink" title="行内文本的垂直居中"></a>行内文本的垂直居中</h2><p>使用 line-height 属性</p>
-<p><img src="/images/59e41d39809f9f356e.png" alt="image"></p>
-<h2 id="行内非文本的垂直居中"><a href="#行内非文本的垂直居中" class="headerlink" title="行内非文本的垂直居中"></a>行内非文本的垂直居中</h2><p>line-height</p>
-<p>vertical-align</p>
-<p><img src="/images/59e41f378cd8353c77.png" alt="image"></p>
-<h2 id="未知高度块级元素"><a href="#未知高度块级元素" class="headerlink" title="未知高度块级元素"></a>未知高度块级元素</h2><p>方法1</p>
-<p>position. translate</p>
-<p><img src="/images/59e4218c5378b8ada5.png" alt="image"></p>
-<p>方法2</p>
-<p>position,  但是不使用 translate</p>
-<p>子元素要有高度,  并设置 maring: auto</p>
-<p><img src="/images/59e4231e3189083f86.png" alt="image"></p>
-<p>方法3</p>
-<p>display: table</p>
-<p><img src="/images/59e4251c5844437301.png" alt="image"></p>
-<p>方法4</p>
-<p>flex布局</p>
-<p><img src="/images/59e425c2268eaf04b0.png" alt="image"></p>
-<p>方法5</p>
-<p>添加一个新的 dom元素, 设置一部分属性</p>
-<p>垂直居中</p>
-<p><img src="/images/59e4281795b566adf6.png" alt="image"></p>
-<p><img src="/images/59e4280394804b4cd5.png" alt="image"></p>
-<h2 id="已知高度的块级元素"><a href="#已知高度的块级元素" class="headerlink" title="已知高度的块级元素"></a>已知高度的块级元素</h2><p>这个就不说了, 数学计算都行</p>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="http://m.jb51.net/css/576737.html" target="_blank" rel="noopener">参考</a></p>
+        <h1 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h1><h2 id="手段"><a href="#手段" class="headerlink" title="手段"></a>手段</h2><ul>
+<li>盗用 cookie, 获取敏感信息;</li>
+<li>破坏正常结构, 插入一些恶意的内容(反射型);</li>
+<li>利用 flash;</li>
+<li>DDOS 攻击效果;</li>
+</ul>
+<h2 id="攻击类型"><a href="#攻击类型" class="headerlink" title="攻击类型"></a>攻击类型</h2><ol>
+<li><p>反射型:<br> 发出请求时, XSS 代码出现在 URL 中, 作为输入提交到服务器端,<br> 服务器端解析后响应, XSS代码随响应内容一起传回给浏览器,<br> 最后浏览器解析执行 XSS 代码.</p>
+<blockquote>
+<p>明文, 在 URL 中</p>
+<p>html 中有部分是后端解析返回的模板渲染的</p>
+</blockquote>
+</li>
+<li><p>存储型;</p>
+</li>
+</ol>
+<h2 id="防御措施"><a href="#防御措施" class="headerlink" title="防御措施"></a>防御措施</h2><ol>
+<li>编码<ul>
+<li>对用户输入进行编码: HTML Entity</li>
+</ul>
+</li>
+<li>过滤<ul>
+<li>移除掉用户上传的 DOM 属性如 onerror等: 一般和事件相关的属性要去过滤;</li>
+<li>移除用户上传的 style 节点, script 节点, iframe 节点等</li>
+</ul>
+</li>
+<li>校正<ul>
+<li>避免直接解码: HTML Entity; </li>
+<li>使用 DOM Parse 转换, 校正不配对的 DOM 标签</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
@@ -406,11 +401,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/css知识/" rel="tag"># css知识</a>
+            <a href="/tags/前端安全/" rel="tag"># 前端安全</a>
           
-            <a href="/tags/css/" rel="tag"># css</a>
-          
-            <a href="/tags/垂直居中/" rel="tag"># 垂直居中</a>
+            <a href="/tags/XSS/" rel="tag"># XSS</a>
           
         </div>
       
@@ -423,8 +416,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/25/brew-install/" rel="next" title="brew 安装">
-                <i class="fa fa-chevron-left"></i> brew 安装
+              <a href="/2018/01/28/mysql-005/" rel="next" title="mysql 学习(五) mysql 数据类型">
+                <i class="fa fa-chevron-left"></i> mysql 学习(五) mysql 数据类型
               </a>
             
           </div>
@@ -433,8 +426,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/25/css-box-modal/" rel="prev" title="css盒模型(标准和怪异盒模型)">
-                css盒模型(标准和怪异盒模型) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/29/mysql-006/" rel="prev" title="mysql 学习(6) 创建数据表相关">
+                mysql 学习(6) 创建数据表相关 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -587,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#利用css设置元素垂直居中的方法"><span class="nav-number">1.</span> <span class="nav-text">利用css设置元素垂直居中的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行内文本的垂直居中"><span class="nav-number">1.2.</span> <span class="nav-text">行内文本的垂直居中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行内非文本的垂直居中"><span class="nav-number">1.3.</span> <span class="nav-text">行内非文本的垂直居中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未知高度块级元素"><span class="nav-number">1.4.</span> <span class="nav-text">未知高度块级元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#已知高度的块级元素"><span class="nav-number">1.5.</span> <span class="nav-text">已知高度的块级元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接"><span class="nav-number">1.6.</span> <span class="nav-text">链接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XSS"><span class="nav-number">1.</span> <span class="nav-text">XSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#手段"><span class="nav-number">1.1.</span> <span class="nav-text">手段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#攻击类型"><span class="nav-number">1.2.</span> <span class="nav-text">攻击类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#防御措施"><span class="nav-number">1.3.</span> <span class="nav-text">防御措施</span></a></li></ol></li></ol></div>
             
 
           </div>
